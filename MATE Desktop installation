@@ -1,0 +1,29 @@
+- first run;
+
+        amazon-linux-extras install epel
+        
+- then install MATE-Desktop;        
+        
+        yum groupinstall MATE Desktop
+        
+- now define a password for your user;
+
+        passwd ec2-user
+        
+- after that install xrdp and some other packages;
+
+        yum install xrdp chromium thunderbird -y
+        
+- start and enable xrdp;
+
+        systemctl start xrdp 
+        systemctl enable xrdp
+        
+- and then set mate-session for all of your users by running;
+
+        sudo bash -c 'echo PREFERRED=/usr/bin/mate-session > /etc/sysconfig/desktop'
+        
+- and thats its, try your new Desktop;
+
+
+        
